@@ -1,0 +1,34 @@
+<div data-ng-controller="HomeController as homeCtrl">
+	<div class="container">
+
+		<div>
+			<h3>Web Sockets Echo</h3>
+		</div>
+
+		<br />
+		<div class="row">
+			<div>
+				<form name="echoForm" class="">
+					<div class="form-group row col-xs-12">
+						<div class="form-group row col-xs-6">
+							<label for="inputMessage">Message</label> <input type="text"
+								class="form-control" id="inputMessage"
+								data-ng-model="message" />
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary pull-left"
+						data-ng-click="sendMessage()">Send</button>
+				</form>
+			</div>
+		</div>
+
+		<br />
+
+		<div class="row">
+			<div data-ng-repeat="resp in responses track by $index">
+				{{resp}}
+			</div>
+		</div>
+
+	</div>
+</div>
